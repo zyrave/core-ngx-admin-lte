@@ -4,30 +4,34 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { AccordionModule } from 'ngx-bootstrap';
+
 import { AppComponent } from './components/app/app.component';
-import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
-import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
-import { CounterComponent } from './components/counter/counter.component';
+import { NavHeaderComponent } from './components/nav/nav-header/nav-header.component';
+import { NavLeftSidebarComponent } from './components/nav/nav-left-sidebar/nav-left-sidebar.component';
+import { NavControlSidebarComponent } from './components/nav/nav-control-sidebar/nav-control-sidebar.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        NavMenuComponent,
-        CounterComponent,
-        FetchDataComponent,
-        HomeComponent
+        HomeComponent,
+        NavHeaderComponent,
+        NavLeftSidebarComponent,
+        NavControlSidebarComponent,
+        DashboardComponent
     ],
     imports: [
         CommonModule,
         HttpModule,
         FormsModule,
+        AccordionModule.forRoot(),
         RouterModule.forRoot([
-            { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'home', component: HomeComponent },
-            { path: 'counter', component: CounterComponent },
-            { path: 'fetch-data', component: FetchDataComponent },
-            { path: '**', redirectTo: 'home' }
+            { path: 'dashboard', component: DashboardComponent },
+            { path: '**', redirectTo: 'dashboard' }
         ])
     ]
 })
