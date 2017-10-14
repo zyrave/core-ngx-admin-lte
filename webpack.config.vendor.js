@@ -47,7 +47,6 @@ const nonTreeShakableModules = [
     // 'bootstrap3-wysihtml5-bower/dist/bootstrap3-wysihtml5.all.js',
     'icheck/icheck.js',
     'admin-lte/dist/js/adminlte.min.js',
-    './ClientApp/assets/js/scripts.js'
 ];
 const allModules = treeShakableModules.concat(nonTreeShakableModules);
 

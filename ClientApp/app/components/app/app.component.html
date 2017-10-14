@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <nav-header></nav-header>
+  <nav-header (controlBarClick)="onControlBarClick()"></nav-header>
   <!-- Left side column. contains the logo and sidebar -->
   <nav-left-sidebar></nav-left-sidebar>
   <!-- /.left-sidebar -->
@@ -32,7 +32,7 @@
   </footer>
   <!-- /.footer-content -->
   <!-- Control Sidebar -->
-  <nav-control-sidebar></nav-control-sidebar>
+  <nav-control-sidebar [isControlBarClicked]="isControlBarClicked"></nav-control-sidebar>
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->

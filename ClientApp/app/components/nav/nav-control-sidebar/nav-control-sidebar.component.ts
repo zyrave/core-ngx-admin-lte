@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'nav-control-sidebar',
@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavControlSidebarComponent implements OnInit {
 
-  constructor() { }
+  @Input('isControlBarClicked') isClicked: boolean;
+
+  constructor() {
+    this.isClicked = false;
+  }
 
   ngOnInit() {
   }
