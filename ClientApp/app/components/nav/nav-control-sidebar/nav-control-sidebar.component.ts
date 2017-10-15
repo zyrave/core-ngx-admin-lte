@@ -7,10 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class NavControlSidebarComponent implements OnInit {
 
-  @Input('isControlBarClicked') isClicked: boolean;
+  @Input('isControlSidebarOpen') isOpen: boolean;
 
   constructor() {
-    this.isClicked = false;
   }
 
   ngOnInit() {

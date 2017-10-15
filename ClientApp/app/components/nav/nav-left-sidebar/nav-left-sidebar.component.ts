@@ -16,10 +16,6 @@ export class NavLeftSidebarComponent implements OnInit {
     private isExamplesMenuOpen: boolean = false;
     private isMultilevelMenuOpen: boolean = false;
 
-    private status: any = {
-        isOpen: false
-    }
-
     constructor() { }
 
     ngOnInit() {

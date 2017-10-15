@@ -8,14 +8,14 @@ import 'admin-lte';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  private isControlBarClicked: boolean;
+  isControlSidebarToggled: boolean;
+  isControlSidebarOpen: boolean;
 
   constructor(private renderer: Renderer2) {
-    this.isControlBarClicked = false;
   }
 
   ngOnInit() {
-    // add the the body classes and styles
+    // add the body classes and styles
     this.renderer.addClass(document.body, 'hold-transition');
     this.renderer.addClass(document.body, 'skin-red');
     this.renderer.addClass(document.body, 'sidebar-mini');
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    // remove the the body classes and styles
+    // remove the body classes and styles
     this.renderer.removeClass(document.body, 'hold-transition');
     this.renderer.removeClass(document.body, 'skin-red');
     this.renderer.removeClass(document.body, 'sidebar-mini');
@@ -34,8 +34,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.renderer.removeStyle(document.body, 'min-height');
   }
 
-  onControlBarClick() {
-    this.isControlBarClicked = !this.isControlBarClicked;
+  onControlSidebarClick() {
+    this.isControlSidebarToggled ? this.isControlSidebarOpen : !this.isControlSidebarOpen;
+    this.isControlSidebarToggled = !this.isControlSidebarToggled;
   }
 
 }

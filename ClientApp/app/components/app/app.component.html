@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <nav-header (controlBarClick)="onControlBarClick()"></nav-header>
+  <nav-header (controlSidebarClick)="onControlSidebarClick()"></nav-header>
   <!-- Left side column. contains the logo and sidebar -->
   <nav-left-sidebar></nav-left-sidebar>
   <!-- /.left-sidebar -->
@@ -12,7 +12,10 @@
         <small>Version 2.0</small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li>
+          <a href="#">
+            <i class="fa fa-dashboard"></i> Home</a>
+        </li>
         <li class="active">Dashboard</li>
       </ol>
     </section>
@@ -28,11 +31,14 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
+    <strong>Copyright &copy; 2014-2016
+      <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
   </footer>
   <!-- /.footer-content -->
   <!-- Control Sidebar -->
-  <nav-control-sidebar [isControlBarClicked]="isControlBarClicked"></nav-control-sidebar>
+  <!-- <span *ngIf="isControlBarClicked"> -->
+  <nav-control-sidebar [isControlSidebarOpen]="isControlSidebarOpen"></nav-control-sidebar>
+  <!-- </span> -->
   <!-- /.control-sidebar -->
 </div>
 <!-- ./wrapper -->
