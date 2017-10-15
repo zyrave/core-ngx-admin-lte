@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy, Renderer2, Input } from '@angular/core';
+import 'admin-lte';
 
 @Component({
   selector: 'app',
@@ -15,6 +16,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // add the the body classes and styles
+    this.renderer.addClass(document.body, 'hold-transition');
     this.renderer.addClass(document.body, 'skin-red');
     this.renderer.addClass(document.body, 'sidebar-mini');
     this.renderer.addClass(document.body, 'pace-done');
@@ -24,6 +26,7 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     // remove the the body classes and styles
+    this.renderer.removeClass(document.body, 'hold-transition');
     this.renderer.removeClass(document.body, 'skin-red');
     this.renderer.removeClass(document.body, 'sidebar-mini');
     this.renderer.removeClass(document.body, 'pace-done');
