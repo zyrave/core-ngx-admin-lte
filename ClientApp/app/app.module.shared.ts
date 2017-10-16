@@ -10,10 +10,12 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './core/components/layout/header/header.component';
 import { FooterComponent } from './core/components/layout/footer/footer.component';
+import { BreadcrumbComponent } from './core/components/layout/breadcrumb/breadcrumb.component';
 import { LeftSidebarComponent } from './core/components/layout/left-sidebar/left-sidebar.component';
 import { RightSidebarComponent } from './core/components/layout/right-sidebar/right-sidebar.component';
 import { DashboardOneComponent } from './components/dashboard-one/dashboard-one.component';
 import { DashboardTwoComponent } from './components/dashboard-two/dashboard-two.component';
+import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,10 +23,12 @@ import { DashboardTwoComponent } from './components/dashboard-two/dashboard-two.
     HomeComponent,
     HeaderComponent,
     FooterComponent,
+    BreadcrumbComponent,
     LeftSidebarComponent,
     RightSidebarComponent,
+    PageNotFoundComponent,
     DashboardOneComponent,
-    DashboardTwoComponent
+    DashboardTwoComponent,
   ],
   imports: [
     CommonModule,
@@ -36,7 +40,8 @@ import { DashboardTwoComponent } from './components/dashboard-two/dashboard-two.
       { path: 'home', component: HomeComponent },
       { path: 'dashboard', component: DashboardOneComponent },
       { path: 'dashboard2', component: DashboardTwoComponent },
-      { path: '**', redirectTo: 'dashboard' }
+      { path: 'page-not-found', component: PageNotFoundComponent },
+      { path: '**', redirectTo: 'page-not-found' }
     ])
   ]
 })

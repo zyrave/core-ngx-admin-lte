@@ -2,8 +2,7 @@ import { Component, OnInit, Renderer2, Output, EventEmitter } from '@angular/cor
 
 @Component({
   selector: 'nav-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  templateUrl: './header.component.html'
 })
 export class HeaderComponent implements OnInit {
 

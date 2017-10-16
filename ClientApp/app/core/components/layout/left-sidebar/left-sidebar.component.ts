@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'nav-left-sidebar',
-  templateUrl: './left-sidebar.component.html',
-  styleUrls: ['./left-sidebar.component.css'],
+  templateUrl: './left-sidebar.component.html'
 })
 export class LeftSidebarComponent implements OnInit {
 
   private avatar = require('./../../../../../assets/img/user2-160x160.jpg');
   private isDashboardMenuOpen: boolean = false;
+  private isLayoutOptionsMenuOpen: boolean = false;
   private isChartMenuOpen: boolean = false;
   private isUiElementsMenuOpen: boolean = false;
   private isFormsMenuOpen: boolean = false;
@@ -23,6 +23,10 @@ export class LeftSidebarComponent implements OnInit {
 
   onDashboardMenuClick() {
     this.isDashboardMenuOpen = !this.isDashboardMenuOpen;
+  }
+
+  onLayoutOptionsMenuClick() {
+    this.isLayoutOptionsMenuOpen = !this.isLayoutOptionsMenuOpen;
   }
 
   onChartMenuClick() {

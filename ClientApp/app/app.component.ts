@@ -8,11 +8,10 @@ import 'admin-lte';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  isRightSidebarToggled: boolean;
-  isRightSidebarOpen: boolean;
+  private isRightSidebarToggled: boolean;
+  private isRightSidebarOpen: boolean;
 
-  constructor(private renderer: Renderer2) {
-  }
+  constructor(private renderer: Renderer2) { }
 
   ngOnInit() {
     // add the body classes and styles

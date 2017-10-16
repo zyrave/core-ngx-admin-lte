@@ -1,32 +1,18 @@
 <div class="wrapper">
   <nav-header (rightSidebarClick)="onRightSidebarClick()"></nav-header>
-  <!-- Left side column. contains the logo and sidebar -->
+  <!-- Left Sidebar -->
   <nav-left-sidebar></nav-left-sidebar>
   <!-- /.left-sidebar -->
-  <!-- Content Wrapper. Contains page content -->
+  <!-- Content Wrapper -->
   <div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <section class="content-header">
-      <h1>
-        Dashboard
-        <small>Version 2.0</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li>
-          <a href="#">
-            <i class="fa fa-dashboard"></i> Home</a>
-        </li>
-        <li class="active">Dashboard</li>
-      </ol>
-    </section>
     <!-- Main content -->
-    <section class="content">
-      <router-outlet></router-outlet>
-    </section>
-    <!-- /.content -->
+    <router-outlet></router-outlet>
+    <!-- /.main-content -->
   </div>
   <!-- /.content-wrapper -->
+  <!-- Footer -->
   <app-footer></app-footer>
+  <!-- ./footer -->
   <!-- Right Sidebar -->
   <nav-right-sidebar [isRightSidebarOpen]="isControlSidebarOpen"></nav-right-sidebar>
   <!-- /.right-sidebar -->
