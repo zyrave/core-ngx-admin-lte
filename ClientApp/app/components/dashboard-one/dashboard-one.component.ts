@@ -15,9 +15,9 @@ import * as moment from 'moment';
 })
 export class DashboardOneComponent implements OnInit {
 
-    private profilePicture = require('./../../../assets/img/user2-160x160.jpg');
-    private profilePicture3 = require('./../../../assets/img/user3-128x128.jpg');
-    private profilePicture4 = require('./../../../assets/img/user4-128x128.jpg');
+    private avatar2 = require('./../../../assets/img/user2-160x160.jpg');
+    private avatar3 = require('./../../../assets/img/user3-128x128.jpg');
+    private avatar4 = require('./../../../assets/img/user4-128x128.jpg');
 
     linechart: morris.GridChart;
     areaChart: morris.GridChart;

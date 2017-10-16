@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftSidebarComponent implements OnInit {
 
-  profilePicture = require('./../../../../../assets/img/user2-160x160.jpg');
+  private avatar = require('./../../../../../assets/img/user2-160x160.jpg');
   private isDashboardMenuOpen: boolean = false;
   private isChartMenuOpen: boolean = false;
   private isUiElementsMenuOpen: boolean = false;
