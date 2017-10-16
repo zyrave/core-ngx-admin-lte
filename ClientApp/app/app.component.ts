@@ -8,8 +8,8 @@ import 'admin-lte';
 })
 export class AppComponent implements OnInit, OnDestroy {
 
-  isControlSidebarToggled: boolean;
-  isControlSidebarOpen: boolean;
+  isRightSidebarToggled: boolean;
+  isRightSidebarOpen: boolean;
 
   constructor(private renderer: Renderer2) {
   }
@@ -34,9 +34,9 @@ export class AppComponent implements OnInit, OnDestroy {
     this.renderer.removeStyle(document.body, 'min-height');
   }
 
-  onControlSidebarClick() {
-    this.isControlSidebarToggled ? this.isControlSidebarOpen : !this.isControlSidebarOpen;
-    this.isControlSidebarToggled = !this.isControlSidebarToggled;
+  onRightSidebarClick() {
+    this.isRightSidebarToggled ? this.isRightSidebarOpen : !this.isRightSidebarOpen;
+    this.isRightSidebarToggled = !this.isRightSidebarToggled;
   }
 
 }

@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <nav-header (controlSidebarClick)="onControlSidebarClick()"></nav-header>
+  <nav-header (rightSidebarClick)="onRightSidebarClick()"></nav-header>
   <!-- Left side column. contains the logo and sidebar -->
   <nav-left-sidebar></nav-left-sidebar>
   <!-- /.left-sidebar -->
@@ -35,10 +35,8 @@
       <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights reserved.
   </footer>
   <!-- /.footer-content -->
-  <!-- Control Sidebar -->
-  <!-- <span *ngIf="isControlBarClicked"> -->
-  <nav-control-sidebar [isControlSidebarOpen]="isControlSidebarOpen"></nav-control-sidebar>
-  <!-- </span> -->
-  <!-- /.control-sidebar -->
+  <!-- Right Sidebar -->
+  <nav-right-sidebar [isRightSidebarOpen]="isControlSidebarOpen"></nav-right-sidebar>
+  <!-- /.right-sidebar -->
 </div>
 <!-- ./wrapper -->

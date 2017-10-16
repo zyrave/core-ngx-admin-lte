@@ -9,11 +9,11 @@ import { } from 'jquery.slimscroll';
 import * as moment from 'moment';
 
 @Component({
-    selector: 'app-dashboard',
-    templateUrl: './dashboard.component.html',
-    styleUrls: ['./dashboard.component.css']
+    selector: 'app-dashboard-one',
+    templateUrl: './dashboard-one.component.html',
+    styleUrls: ['./dashboard-one.component.css']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardOneComponent implements OnInit {
 
     private profilePicture = require('./../../../assets/img/user2-160x160.jpg');
     private profilePicture3 = require('./../../../assets/img/user3-128x128.jpg');
